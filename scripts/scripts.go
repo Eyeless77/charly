@@ -37,7 +37,7 @@ func RunScript(repo types.Repo, repos types.Repos) error {
 		return err
 	}
 
-	cmd := exec.Command("/bin/sh", f.Name())
+	cmd := exec.Command("/bin/bash", f.Name())
 	stderr, _ := cmd.StderrPipe()
 	err = cmd.Run()
 	if err != nil {
